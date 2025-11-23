@@ -1,0 +1,5 @@
+compiler:A program that translates code into machine language
+function:A reusable block of code that performs a specific task
+recursion:A function that calls itself
+variable:A named location in memory to store data
+pointer:A variable that stores a memory address

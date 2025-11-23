@@ -1,0 +1,50 @@
+loop:A sequence of instructions that repeats until a condition is met
+array:A collection of elements stored in contiguous memory
+bug:An error or flaw in a program
+input:Data given to a program
+output:Information produced by a program
+bit:The smallest unit of data in computing
+byte:A group of 8 bits
+click:Pressing a mouse button
+cursor:A movable indicator on a screen
+file:A collection of data stored on a computer
+folder:A container used to organize files
+icon:A small picture representing a program or file
+keyboard:A device used to enter text
+mouse:A device used to move the cursor
+monitor:A screen that displays output
+RAM:Temporary memory used by programs
+ROM:Permanent memory stored on a chip
+save:Store data for later use
+delete:Remove a file or data
+error:A mistake that causes a program to not work correctly
+code:Instructions written for a computer
+app:A software application
+login:Enter username and password to access a system
+logout:Exit a system safely
+network:Two or more computers connected together
+internet:A global network of computers
+website:A collection of web pages
+browser:A program used to view websites
+link:A connection that opens another page or site
+download:Transfer data from internet to computer
+upload:Transfer data from computer to internet
+print:Produce a hard copy on paper
+search:Look for information
+spam:Unwanted or junk messages
+username:A name used to identify a user
+password:A secret word used to access accounts
+backup:A copy of important data
+folder:A container used to organize files
+desktop:The main screen of a computer
+tab:A separate section in a browser
+battery:A device that provides power
+update:Install new features or fixes
+wifi:Wireless internet connection
+router:A device that distributes internet connection
+speaker:A device that outputs sound
+volume:The loudness of audio
+shortcut:A quick way to open files or programs
+scroll:Move the page up or down
+screen:A display area for visuals
+
