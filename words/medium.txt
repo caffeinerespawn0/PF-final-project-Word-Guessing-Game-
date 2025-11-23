@@ -3,3 +3,47 @@ function:A reusable block of code that performs a specific task
 recursion:A function that calls itself
 variable:A named location in memory to store data
 pointer:A variable that stores a memory address
+array index:The position of an element in an array
+loop counter:A variable used to control loops
+string:A sequence of characters
+integer:A whole number
+float:A number with decimals
+boolean:A true or false value
+syntax:The rules of writing code
+syntax error:An error in the code structure
+logic error:A flaw in a program's logic
+debugging:The process of fixing errors
+IDE:A software tool for writing code
+library:A collection of pre-written code
+framework:A structure to support software development
+module:A file containing code
+parameter:A value passed into a function
+argument:The actual value passed to a function
+return value:The data a function sends back
+class:A blueprint for creating objects
+object:An instance of a class
+constructor:A special method to initialize objects
+stack:A LIFO data structure
+queue:A FIFO data structure
+arraylist:A dynamic array structure
+dictionary:A collection of key-value pairs
+API:A set of tools for interacting with software
+event:An action detected by a program
+listener:A function that waits for events
+thread:A small unit of a process
+process:A running program
+cache:Temporary high-speed storage
+binary:A base-2 number system
+hexadecimal:A base-16 number system
+compile-time:Period when code is translated to machine language
+runtime:Period when a program is running
+exception:An error during runtime
+try block:A section of code tested for errors
+catch block:A section that handles errors
+class method:A function belonging to a class
+attribute:A variable inside a class
+namespace:A container to avoid name conflicts
+data type:A category of data
+command:A specific instruction to the system
+token:A meaningful element in code
+operator:A symbol that performs actions
