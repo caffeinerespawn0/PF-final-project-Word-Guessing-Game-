@@ -16,43 +16,43 @@ int batteryRow = 10;
 int wordRow = 12;
 int attemptsRow = 14;
 int inputRow = 16;
-int messageRow = 18; // for feedback messages like correct/wrong/already guessed
+int messageRow = 18; 
 
-//(x=column, y=row)
+//here im using x for column and y for row
 void setCursor(int x, int y) {
     COORD coord = { x, y };
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 }
 
-// Show battery bar
 void showBattery(int attempts, int total, int x, int y) {
     setCursor(x, y); // fixed position
     int segments = 10;
     int filled = (attempts * segments) / total;
     char *color;
 
-    if ((float)attempts / total > 0.6) color = GREEN;
-    else if ((float)attempts / total > 0.3) color = YELLOW;
+    if ((float)attempts / total > 0.6)
+    color = GREEN;
+    else if ((float)attempts / total > 0.3) 
+    color = YELLOW;
     else color = RED;
 
     printf("Chances: [");
     printf("%s", color);
-    for (int i = 0; i < filled; i++) putchar('\xdb');   // full block
+    for (int i = 0; i < filled; i++) putchar('\xdb');   
     printf("%s", RESET);
-    for (int i = filled; i < segments; i++) putchar('-'); // empty segments
-    printf("]  (%d/%d)  ", attempts, total); // extra spaces to overwrite
+    for (int i = filled; i < segments; i++) putchar('-'); 
+    printf("]  (%d/%d)  ", attempts, total);
 }
 
 
 void printDisplay(const char *display, int row) {
     int consoleWidth = 80;
     int len = strlen(display);
-    int padding = (consoleWidth - len*2) / 2; // *2 for spacing
+    int padding = (consoleWidth - len*2) / 2;
     setCursor(padding, row);
     for (int i = 0; i < len; i++) printf("%c ", display[i]);
 }
 
-//Beeps
 void beep_wrong(){
     Beep(400, 150);
 }
@@ -89,12 +89,9 @@ void playGame(WordEntry words[], int total) {
     printf("\033[36m===============================================\033[0m\n\n");
     printf("Hint: %s\n\n", words[idx].meaning);
 
-    // Fixed positions for board
     int batteryRow = 10;
     int wordRow = 12;
     int attemptsRow = 14;
-
-    // Initialize guessed letters
     char guessed[50];
     int guessedCount = 0;
 
@@ -105,17 +102,17 @@ void playGame(WordEntry words[], int total) {
         showBattery(attempts, len + 3, 0, batteryRow);
         printDisplay(display, wordRow);
 
-        // Display attempts
+    
         setCursor(0, attemptsRow);
         printf("Attempts left: %d   ", attempts); //im adding extra spaces here to overwrite
 
-        // Input
+
         setCursor(0, inputRow);
         printf("Enter a letter or guess the full word: ");
         char input[50];
         scanf("%s", input);
 
-        // Clear input line for next round
+        
         setCursor(0, inputRow);
         printf("                                                   ");
 
@@ -160,10 +157,9 @@ void playGame(WordEntry words[], int total) {
             continue;
         }
 
-        // Save guessed letter so that i can display it back to the user
+        // saving guessed letter so that i can display it back to the user
         guessed[guessedCount++] = guess;
 
-        // Check letter in word
         for (int i = 0; i < len; i++) {
             if (tolower(word[i]) == tolower(guess) && display[i] == '_') {
                 display[i] = word[i];
@@ -209,18 +205,14 @@ void playGame(WordEntry words[], int total) {
 }
 
 int main() {
-    // Array to hold all words loaded from text files
     WordEntry words[MAX_WORDS];
     int total = 0;
-
-    // Print welcome with colors
     printf(CYAN "===============================================\n" RESET);
     printf(YELLOW "           Guess It or L + Ratio \n" RESET);
     printf(CYAN "===============================================\n\n" RESET);
     printf("Semester-End Project - Programming Fundamentals\n");
     printf("-----------------------------------------------\n");
 
-    // Select difficulty
     printf("Select difficulty:\n");
     printf(GREEN "1. Easy\n" RESET);
     printf(YELLOW "2. Medium\n" RESET);
