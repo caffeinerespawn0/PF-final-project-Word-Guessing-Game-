@@ -17,12 +17,6 @@ void print_wrong(const char *msg) {
 void print_warning(const char *msg) {
     printf("%s%s%s\n", COLOR_YELLOW, msg, COLOR_RESET);
 }
-/*
-   Bit by Bit – Word Guessing Game
-   Semester-End Project
-   File: game_logic.c
-   Handles loading words + meanings from text files.
-*/
 
 int loadWords(const char *filename, WordEntry words[], int maxWords) {
     FILE *fp = fopen(filename, "r");
@@ -35,11 +29,11 @@ int loadWords(const char *filename, WordEntry words[], int maxWords) {
     while (count < maxWords &&
            fscanf(fp, " %49[^:]: %199[^\n]", words[count].word, words[count].meaning) == 2) {
 
-        // --- Trim leading spaces ---
+        // Trim leading spaces
         char *w = words[count].word;
         while (*w == ' ') memmove(w, w + 1, strlen(w));
 
-        // --- Trim trailing spaces and Windows-style line endings (\r\n) ---
+        //Trimming trailing spaces through (\r\n)
         int len = strlen(words[count].word);
         while (len > 0 && (words[count].word[len-1] == ' ' ||
                            words[count].word[len-1] == '\n' ||
@@ -48,15 +42,12 @@ int loadWords(const char *filename, WordEntry words[], int maxWords) {
             len--;
         }
 
-        // --- Optional: Trim trailing spaces in meaning as well ---
+        //Trimming trailing spaces in meaning as well
         int mlen = strlen(words[count].meaning);
-        while (mlen > 0 && (words[count].meaning[mlen-1] == ' ' ||
-                            words[count].meaning[mlen-1] == '\n' ||
-                            words[count].meaning[mlen-1] == '\r')) {
+        while (mlen > 0 && (words[count].meaning[mlen-1] == ' ' || words[count].meaning[mlen-1] == '\n' || words[count].meaning[mlen-1] == '\r')) {
             words[count].meaning[mlen-1] = '\0';
             mlen--;
         }
-
         count++;
     }
 
