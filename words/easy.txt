@@ -47,5 +47,3 @@ volume:The loudness of audio
 shortcut:A quick way to open files or programs
 scroll:Move the page up or down
 screen:A display area for visuals
-
-
