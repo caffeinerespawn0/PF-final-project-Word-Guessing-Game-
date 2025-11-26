@@ -193,7 +193,7 @@ void playGame(WordEntry words[], int total) {
             setCursor(0, messageRow);
             print_correct("Congratulations! You guessed the word!");
             beep_win();
-            printf("\nThe word was%s\n", word);
+            printf("\nThe word was %s\n", word);
             break;
         }
     }
