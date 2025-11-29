@@ -210,8 +210,6 @@ int main() {
     printf(CYAN "===============================================\n" RESET);
     printf(YELLOW "           Guess It or L + Ratio \n" RESET);
     printf(CYAN "===============================================\n\n" RESET);
-    printf("Semester-End Project - Programming Fundamentals\n");
-    printf("-----------------------------------------------\n");
 
     printf("Select difficulty:\n");
     printf(GREEN "1. Easy\n" RESET);
